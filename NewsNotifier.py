@@ -5,7 +5,7 @@ import time
 def parseFeed():
     f = feedparser.parse("http://feeds.bbci.co.uk/news/rss.xml")
     ICON_PATH = os.getcwd() + "/newsicon.ico"
-    notify2.init('News Notify')
+    notify2.init('News Notification')
     for newsitem in f['items']: 
         n = notify2.Notification(newsitem['title'], 
                                  newsitem['summary'], 
